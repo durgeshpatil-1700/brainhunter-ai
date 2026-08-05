@@ -167,18 +167,37 @@ p {
   align-items: baseline;
   gap: 0.15rem;
   flex-shrink: 0;
+  color: var(--navy);
 }
 
-.logo img {
-  height: 22px;
+.logo-svg {
+  display: block;
+  height: 17px;
   width: auto;
 }
 
 .logo-ai {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--steel);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.logo-light {
+  color: #f4f7fb;
+}
+
+.logo-light .logo-ai {
+  color: var(--steel-bright);
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #8a93a3;
+  margin: 0.45rem 0 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 .nav {
@@ -264,12 +283,31 @@ p {
 }
 
 .brand-signal {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.hero-logo {
+  height: 28px;
+  width: auto;
+}
+
+.brand-ai {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  color: var(--navy);
-  letter-spacing: -0.01em;
-  margin-bottom: 0.85rem;
+  font-size: 1.35rem;
+  color: var(--steel);
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.35rem;
 }
 
 .hero h1 {
@@ -795,10 +833,8 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-brand img {
-  height: 22px;
-  width: auto;
-  margin-bottom: 0.85rem;
+.footer-brand .logo {
+  margin-bottom: 0.15rem;
 }
 
 .footer-tag {
