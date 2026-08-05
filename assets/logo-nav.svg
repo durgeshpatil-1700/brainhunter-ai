@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 56" role="img" aria-label="Brainhunter">
+  <title>Brainhunter</title>
+  <g fill="#1A2B48" font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="36" letter-spacing="2.5">
+    <text x="0" y="38">BR</text>
+    <text x="96" y="38">INHUNTER</text>
+  </g>
+  <g transform="translate(56, 6)" fill="none" stroke="#1A2B48" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 2 L2 36 M18 2 L34 36" stroke-width="5.5"/>
+    <path d="M9 23 L18 12 L27 23" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 28" fill="none" aria-hidden="true">
+  <!-- BRAINHUNTER wordmark with chevron-A -->
+  <g fill="currentColor" font-family="Montserrat, Arial Black, Arial, sans-serif" font-weight="800" font-size="22" letter-spacing="2.2">
+    <text x="0" y="21">BR</text>
+    <text x="62" y="21">INHUNTER</text>
+  </g>
+  <g stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 3 L33 23 M44 3 L55 23" stroke-width="3.4"/>
+    <path d="M38 15.5 L44 9 L50 15.5" stroke-width="2.6"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Brainhunter">
+  <rect width="48" height="48" rx="10" fill="#1A2B48"/>
+  <!-- Stylized A / chevron mark -->
+  <path d="M24 10 L10 38 H16.5 L19.8 30 H28.2 L31.5 38 H38 Z" fill="none" stroke="#F4F7FB" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M18 28 L24 19 L30 28" fill="none" stroke="#7EB6FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
