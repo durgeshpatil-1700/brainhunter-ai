@@ -5,8 +5,15 @@
   const year = document.getElementById("year");
   const form = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
+  const page = document.body.dataset.page;
 
   if (year) year.textContent = String(new Date().getFullYear());
+
+  if (page && nav) {
+    nav.querySelectorAll("[data-nav]").forEach((link) => {
+      if (link.dataset.nav === page) link.classList.add("active");
+    });
+  }
 
   const onScroll = () => {
     if (!header) return;
