@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="Brainhunter  Building teams and dreams">
+  <title>Brainhunter</title>
+  <g fill="#F4F7FB" font-family="Montserrat, Arial Black, Arial, sans-serif" font-weight="800" font-size="58" letter-spacing="3.5">
+    <text x="8" y="62">BR</text>
+    <text x="158" y="62">INHUNTER</text>
+  </g>
+  <g fill="none" stroke="#F4F7FB" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 14 L86 66" stroke-width="9"/>
+    <path d="M112 14 L138 66" stroke-width="9"/>
+    <path d="M98 44 L112 28 L126 44" stroke-width="5.5"/>
+  </g>
+  <text x="630" y="100" text-anchor="end" fill="#A8B4C8" font-family="Montserrat, Arial, sans-serif" font-weight="400" font-size="20" letter-spacing="0.4">Building teams and dreams</text>
+</svg>
