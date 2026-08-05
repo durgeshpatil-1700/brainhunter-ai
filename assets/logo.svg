@@ -1,13 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="Brainhunter — Building teams and dreams">
   <title>Brainhunter</title>
-  <g fill="#1A2B48" font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="56" letter-spacing="4">
-    <text x="0" y="58">BR</text>
-    <text x="150" y="58">INHUNTER</text>
+  <!-- BRAINHUNTER wordmark -->
+  <g fill="#1A2B48" font-family="Montserrat, Arial Black, Arial, sans-serif" font-weight="800" font-size="58" letter-spacing="3.5">
+    <text x="8" y="62">BR</text>
+    <text x="158" y="62">INHUNTER</text>
   </g>
-  <!-- Stylized A: open frame + upward chevron -->
-  <g transform="translate(88, 10)" fill="none" stroke="#1A2B48" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M26 4 L4 52 M26 4 L48 52" stroke-width="8"/>
-    <path d="M14 32 L26 18 L38 32" stroke-width="5.5"/>
+  <!-- Stylized A: open legs + upward chevron (no crossbar) -->
+  <g fill="none" stroke="#1A2B48" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 14 L86 66" stroke-width="9"/>
+    <path d="M112 14 L138 66" stroke-width="9"/>
+    <path d="M98 44 L112 28 L126 44" stroke-width="5.5"/>
   </g>
-  <text x="230" y="98" fill="#8A93A3" font-family="Montserrat, Arial, sans-serif" font-weight="400" font-size="18" letter-spacing="0.5">Building teams and dreams</text>
+  <!-- Tagline right-aligned under HUNTER -->
+  <text x="630" y="100" text-anchor="end" fill="#8A93A3" font-family="Montserrat, Arial, sans-serif" font-weight="400" font-size="20" letter-spacing="0.4">Building teams and dreams</text>
 </svg>
