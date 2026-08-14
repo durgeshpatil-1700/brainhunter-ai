@@ -1,9 +1,9 @@
 # Brainhunter.ai
 
-Modern AI Workforce Platform website — Hire Smarter. Build Faster.
+Professional AI Workforce Platform website — Hire Smarter. Build Faster.
 
 ## Pages
-- `index.html` — Home (AI neural video-style hero)
+- `index.html` — Home
 - `about.html` — About
 - `services.html` — Services
 - `ats.html` — AI ATS
