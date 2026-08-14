@@ -1,31 +1,16 @@
 # Brainhunter.ai
 
-AI-powered Talent & Technology Partner — The AI Workforce Platform.
+Modern AI Workforce Platform website — Hire Smarter. Build Faster.
 
 ## Pages
-
-- `index.html` — Home
+- `index.html` — Home (AI neural video-style hero)
 - `about.html` — About
-- `services.html` — Services (Talent + AI Solutions)
-- `ats.html` — AI ATS Platform
+- `services.html` — Services
+- `ats.html` — AI ATS
 - `contact.html` — Contact
 
-## Local preview
-
+## Preview
 ```bash
 python3 -m http.server 8080
 ```
-
-Then visit:
-
-- http://localhost:8080/
-- http://localhost:8080/about.html
-- http://localhost:8080/services.html
-- http://localhost:8080/ats.html
-- http://localhost:8080/contact.html
-
-## Contact (from brainhunter.in)
-
-- Phone / WhatsApp: +91 81044 49302
-- Email: career@brainhunter.in
-- Address: 14/15, Ostwal Garden, Beverly Park, Mira Road East, Mumbai, MH 401107
+Visit http://localhost:8080/
