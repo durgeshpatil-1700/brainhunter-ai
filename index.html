@@ -34,7 +34,29 @@
 
   <main>
     <section class="hero-home">
-      <div class="hero-orbit" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-image"></div>
+        <canvas id="heroAiCanvas" class="hero-ai-canvas"></canvas>
+        <svg class="hero-ai-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="rgba(13,148,136,0.22)" stroke-width="1.2">
+            <path d="M80 120 L220 180 L340 110 L480 200 L620 140 L760 210 L920 130 L1080 190" />
+            <path d="M120 420 L260 360 L400 440 L560 350 L720 430 L880 340 L1040 410" />
+            <path d="M200 250 L320 300 L450 240 L580 320 L710 260 L850 330 L980 270" />
+          </g>
+          <g fill="#0d9488">
+            <circle cx="220" cy="180" r="4" opacity="0.45"/><circle cx="480" cy="200" r="3.5" opacity="0.4"/>
+            <circle cx="760" cy="210" r="4" opacity="0.35"/><circle cx="400" cy="440" r="3.5" opacity="0.4"/>
+            <circle cx="720" cy="430" r="4" opacity="0.35"/><circle cx="580" cy="320" r="3.5" opacity="0.45"/>
+            <circle cx="850" cy="330" r="4" opacity="0.35"/><circle cx="320" cy="300" r="3" opacity="0.4"/>
+          </g>
+          <g fill="#2563eb" opacity="0.35">
+            <circle cx="340" cy="110" r="3"/><circle cx="620" cy="140" r="3"/><circle cx="560" cy="350" r="3"/>
+            <circle cx="980" cy="270" r="3"/><circle cx="260" cy="360" r="2.5"/>
+          </g>
+        </svg>
+        <div class="hero-orbit"></div>
+        <div class="hero-orbit hero-orbit-2"></div>
+      </div>
       <div class="container hero-home-grid">
         <div class="hero-copy">
           <p class="hero-brand">brainhunter<span class="logo-dot">.ai</span></p>
@@ -61,7 +83,7 @@
         <div class="hero-visual">
           <div class="hero-float-chip chip-b"><span>92%</span> AI Match Score</div>
           <div class="hero-visual-frame">
-            <img src="assets/ats-product-light.png" alt="Brainhunter.ai AI hiring platform preview" width="960" height="600" />
+            <img src="assets/hero-product-pro.png" alt="Professional Brainhunter.ai AI hiring platform on laptop" width="960" height="600" />
           </div>
           <div class="hero-float-chip chip-a"><span>2×</span> Faster hiring cycles</div>
         </div>
