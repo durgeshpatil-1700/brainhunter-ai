@@ -389,6 +389,7 @@ p { margin: 0 0 1em; }
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center;
 }
 
 .hero-float-chip {
@@ -430,7 +431,12 @@ p { margin: 0 0 1em; }
     var(--bg-soft);
 }
 
-.page-hero-inner { max-width: 720px; }
+.page-hero-inner { max-width: 720px; margin-inline: auto; }
+
+.page-hero .hero-ctas {
+  justify-content: center;
+  margin-bottom: 0;
+}
 
 .page-hero h1 {
   font-size: clamp(2.1rem, 4.5vw, 3.2rem);
