@@ -32,41 +32,38 @@
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow">Contact</p>
-        <h1>Let’s hire smarter together</h1>
-        <p class="page-lead">We’re here to help with talent acquisition and AI technology across India, UAE &amp; the GCC region.</p>
-      </div>
-    </section>
-
-    <section class="contact-page">
-      <div class="container contact-grid">
-        <div class="contact-info reveal">
-          <div class="contact-visual">
-            <img src="assets/img-contact-indian.png" alt="Indian business leaders sealing a professional partnership" />
-          </div>
-          <h2>Get in touch</h2>
-          <p>Reach the Brainhunter team for demos, hiring support, or AI solutions.</p>
-          <ul class="contact-list">
-            <li><span class="contact-label">Phone</span><a href="tel:+918104449302">+91 81044 49302</a></li>
-            <li><span class="contact-label">Email</span><a href="mailto:career@brainhunter.in">career@brainhunter.in</a></li>
-            <li><span class="contact-label">Address</span><span>14/15, Ostwal Garden, Beverly Park, Mira Road East, Mumbai, MH 401107</span></li>
-          </ul>
-          <div class="contact-map">
-            <iframe
-              title="Brainhunter office location map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=14%2F15%20Ostwal%20Garden%20Beverly%20Park%20Mira%20Road%20East%20Mumbai%20401107&z=15&output=embed"
-              allowfullscreen
-            ></iframe>
-          </div>
+  <main class="contact-main">
+    <section class="contact-shell">
+      <div class="contact-top">
+        <div class="contact-top-copy reveal">
+          <p class="eyebrow">Contact Us</p>
+          <h1>Let’s build your next hire — or your next AI system</h1>
+          <p class="contact-intro-lead">Talk to Brainhunter about talent acquisition, AI ATS, and technology solutions across India, UAE &amp; the GCC.</p>
         </div>
+        <div class="contact-top-media reveal" aria-hidden="false">
+          <img src="assets/img-contact-indian.png" alt="Indian business leaders sealing a professional partnership" />
+        </div>
+      </div>
 
-        <div class="contact-form-wrap reveal">
-          <h2>Request a demo</h2>
+      <div class="contact-channels reveal" aria-label="Contact details">
+        <a class="contact-channel" href="tel:+918104449302">
+          <span class="contact-label">Phone</span>
+          <span class="contact-channel-value">+91 81044 49302</span>
+        </a>
+        <a class="contact-channel" href="mailto:career@brainhunter.in">
+          <span class="contact-label">Email</span>
+          <span class="contact-channel-value">career@brainhunter.in</span>
+        </a>
+        <div class="contact-channel">
+          <span class="contact-label">Office</span>
+          <span class="contact-channel-value">14/15, Ostwal Garden, Beverly Park, Mira Road East, Mumbai, MH 401107</span>
+        </div>
+      </div>
+
+      <div class="contact-body">
+        <div class="contact-form-panel reveal">
+          <h2>Send a message</h2>
+          <p class="contact-form-lead">Share a few details and our team will respond shortly.</p>
           <form class="contact-form js-mail-form" id="contactForm" action="https://formsubmit.co/career@brainhunter.in" method="POST">
             <input type="hidden" name="_subject" value="Contact / Demo Request — Brainhunter.ai" />
             <input type="hidden" name="_captcha" value="false" />
@@ -86,12 +83,28 @@
             </div>
             <div class="form-row single">
               <label class="sr-only" for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="How can we help?"></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-            <p class="form-note" id="formNote" hidden>Thank you — your message has been sent to career@brainhunter.in.</p>
+            <p class="form-note" id="formNote" hidden>Thank you — your message has been sent. We’ll get back to you soon.</p>
           </form>
         </div>
+
+        <aside class="contact-map-panel reveal">
+          <div class="contact-map-panel-head">
+            <h2>Find us in Mumbai</h2>
+            <p>Beverly Park, Mira Road East</p>
+          </div>
+          <div class="contact-map">
+            <iframe
+              title="Brainhunter office location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=14%2F15%20Ostwal%20Garden%20Beverly%20Park%20Mira%20Road%20East%20Mumbai%20401107&z=15&output=embed"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -115,7 +128,7 @@
     <div class="demo-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
       <button type="button" class="demo-modal-close js-close-demo" aria-label="Close">&times;</button>
       <h2 id="demoModalTitle">Book a Demo</h2>
-      <p class="demo-modal-lead">Tell us a little about you — we’ll reach out at career@brainhunter.in.</p>
+      <p class="demo-modal-lead">Tell us a little about you — we’ll get back to you soon.</p>
       <form class="contact-form js-mail-form" id="demoForm" action="https://formsubmit.co/career@brainhunter.in" method="POST">
         <input type="hidden" name="_subject" value="Book a Demo — Brainhunter.ai" />
         <input type="hidden" name="_captcha" value="false" />
@@ -138,7 +151,7 @@
           <textarea id="demo-message" name="message" rows="4" placeholder="How can we help?"></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-lg">Send Request</button>
-        <p class="form-note" id="demoFormNote" hidden>Thank you — your demo request has been sent to career@brainhunter.in.</p>
+        <p class="form-note" id="demoFormNote" hidden>Thank you — your demo request has been sent. We’ll get back to you soon.</p>
       </form>
     </div>
   </div>

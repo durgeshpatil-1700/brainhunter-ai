@@ -113,7 +113,9 @@
       if (noteEl) {
         noteEl.hidden = false;
         noteEl.textContent =
-          "Thank you. Your message has been sent to career@brainhunter.in. We’ll get back to you soon.";
+          form.id === "demoForm"
+            ? "Thank you. Your demo request has been sent. We’ll get back to you soon."
+            : "Thank you. Your message has been sent. We’ll get back to you soon.";
       }
       return true;
     } catch (err) {
@@ -126,7 +128,9 @@
       if (noteEl) {
         noteEl.hidden = false;
         noteEl.textContent =
-          "Opening your email client to send this to career@brainhunter.in…";
+          form.id === "demoForm"
+            ? "Opening your email client to send this request…"
+            : "Opening your email client to send this message…";
       }
       return false;
     } finally {
