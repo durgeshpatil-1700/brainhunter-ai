@@ -3,8 +3,6 @@
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("navToggle");
   const year = document.getElementById("year");
-  const form = document.getElementById("contactForm");
-  const formNote = document.getElementById("formNote");
   const page = document.body.dataset.page;
 
   if (year) year.textContent = String(new Date().getFullYear());
@@ -59,11 +57,104 @@
     reveals.forEach((el) => el.classList.add("visible"));
   }
 
-  if (form && formNote) {
-    form.addEventListener("submit", (e) => {
+  /* Demo modal */
+  const demoModal = document.getElementById("demoModal");
+  const openDemo = () => {
+    if (!demoModal) return;
+    demoModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    const first = demoModal.querySelector("input, textarea, button");
+    if (first) first.focus();
+  };
+  const closeDemo = () => {
+    if (!demoModal) return;
+    demoModal.hidden = true;
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll(".js-open-demo").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
-      formNote.hidden = false;
+      openDemo();
+    });
+  });
+  document.querySelectorAll(".js-close-demo").forEach((btn) => {
+    btn.addEventListener("click", closeDemo);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && demoModal && !demoModal.hidden) closeDemo();
+  });
+
+  /* Send form data to career@brainhunter.in via FormSubmit */
+  async function submitInquiry(form, noteEl) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const original = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+    }
+
+    const data = new FormData(form);
+    const payload = Object.fromEntries(data.entries());
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/career@brainhunter.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("submit failed");
+
       form.reset();
+      if (noteEl) {
+        noteEl.hidden = false;
+        noteEl.textContent =
+          "Thank you. Your message has been sent to career@brainhunter.in. We’ll get back to you soon.";
+      }
+      return true;
+    } catch (err) {
+      /* Fallback: open mail client if FormSubmit is not yet activated */
+      const subject = encodeURIComponent(payload._subject || "Website inquiry");
+      const body = encodeURIComponent(
+        `Name: ${payload.name || ""}\nEmail: ${payload.email || ""}\nPhone: ${payload.phone || ""}\n\n${payload.message || ""}`
+      );
+      window.location.href = `mailto:career@brainhunter.in?subject=${subject}&body=${body}`;
+      if (noteEl) {
+        noteEl.hidden = false;
+        noteEl.textContent =
+          "Opening your email client to send this to career@brainhunter.in…";
+      }
+      return false;
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = original;
+      }
+    }
+  }
+
+  const contactForm = document.getElementById("contactForm");
+  const formNote = document.getElementById("formNote");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      await submitInquiry(contactForm, formNote);
+    });
+  }
+
+  const demoForm = document.getElementById("demoForm");
+  const demoFormNote = document.getElementById("demoFormNote");
+  if (demoForm) {
+    demoForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const ok = await submitInquiry(demoForm, demoFormNote);
+      if (ok) {
+        setTimeout(closeDemo, 1800);
+      }
     });
   }
 

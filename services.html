@@ -26,7 +26,7 @@
       </nav>
       <div class="header-actions">
         <a class="btn btn-ghost" href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="contact.html">Book a Demo</a>
+        <button type="button" class="btn btn-primary js-open-demo">Book a Demo</button>
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -123,6 +123,40 @@
   <a class="whatsapp-float" href="https://wa.me/918104449302" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.3 12.1-12S22.8 3 16.1 3zm0 21.9c-1.7 0-3.4-.5-4.9-1.3l-.3-.2-5 1 1-4.8-.2-.3c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.5-9.8 10-9.8s10 4.4 10 9.8-4.5 9.7-10.1 9.7zm5.5-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.2-.2-.3-.5-.4z"/></svg>
   </a>
+
+  <div class="demo-modal" id="demoModal" hidden>
+    <div class="demo-modal-backdrop js-close-demo" tabindex="-1"></div>
+    <div class="demo-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <button type="button" class="demo-modal-close js-close-demo" aria-label="Close">&times;</button>
+      <h2 id="demoModalTitle">Book a Demo</h2>
+      <p class="demo-modal-lead">Tell us a little about you — we’ll reach out at career@brainhunter.in.</p>
+      <form class="contact-form js-mail-form" id="demoForm" action="https://formsubmit.co/career@brainhunter.in" method="POST">
+        <input type="hidden" name="_subject" value="Book a Demo — Brainhunter.ai" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="form-row">
+          <label class="sr-only" for="demo-name">Name</label>
+          <input id="demo-name" name="name" type="text" placeholder="Your name" required />
+          <label class="sr-only" for="demo-email">Work email</label>
+          <input id="demo-email" name="email" type="email" placeholder="Work email" required />
+        </div>
+        <div class="form-row">
+          <label class="sr-only" for="demo-phone">Phone</label>
+          <input id="demo-phone" name="phone" type="tel" placeholder="Phone" />
+          <label class="sr-only" for="demo-company">Company</label>
+          <input id="demo-company" name="company" type="text" placeholder="Company" />
+        </div>
+        <div class="form-row single">
+          <label class="sr-only" for="demo-message">Message</label>
+          <textarea id="demo-message" name="message" rows="4" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send Request</button>
+        <p class="form-note" id="demoFormNote" hidden>Thank you — your demo request has been sent to career@brainhunter.in.</p>
+      </form>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
