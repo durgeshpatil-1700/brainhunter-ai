@@ -1067,9 +1067,9 @@ p { margin: 0 0 1em; }
 
 /* Infrastructure & AI logo strip */
 .infra-strip {
-  padding: 1.75rem 0 2.25rem;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  padding: 2rem 0 2.5rem;
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
 }
 
 .infra-inner {
@@ -1162,15 +1162,22 @@ p { margin: 0 0 1em; }
 
 .future-screening-head { margin-bottom: 2.5rem; }
 
+.future-title {
+  white-space: normal;
+}
+
 .future-word {
   color: var(--teal);
-  display: inline-block;
-  min-width: 9ch;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
 
 .future-word.is-swap {
   opacity: 0;
+  display: inline-block;
   transform: translateY(8px);
 }
 
