@@ -163,6 +163,12 @@
   }
 
   /* Subtle AI neural network for light hero background */
+  const heroVideo = document.querySelector(".hero-video");
+  if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.removeAttribute("autoplay");
+    heroVideo.pause();
+  }
+
   const canvas = document.getElementById("heroAiCanvas");
   if (canvas && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const ctx = canvas.getContext("2d");
