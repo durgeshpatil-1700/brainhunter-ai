@@ -64,24 +64,100 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-float-chip chip-b"><span>92%</span> AI Match Score</div>
-          <div class="hero-visual-frame hero-video-frame">
-            <div class="hero-video-chrome" aria-hidden="true">
-              <span></span><span></span><span></span>
+          <div class="hero-demo" id="heroDemo" aria-label="Live AI interview screening demo">
+            <div class="hero-demo-tabs" role="tablist" aria-label="Demo modes">
+              <button type="button" class="hero-demo-tab" data-demo-tab="ask" aria-selected="false">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0-9 9c0 1.7.5 3.3 1.3 4.7L3 21l4.5-1.2A8.9 8.9 0 0 0 12 21a9 9 0 0 0 0-18zm0 2a7 7 0 1 1 0 14c-1.3 0-2.5-.3-3.6-.9l-.4-.2-2.6.7.7-2.5-.2-.4A6.9 6.9 0 0 1 5 12a7 7 0 0 1 7-7z"/></svg>
+                Ask AI
+              </button>
+              <button type="button" class="hero-demo-tab" data-demo-tab="source" aria-selected="false">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10 4h4v2h-4V4zm-6 6h4v2H4v-2zm12 0h4v2h-4v-2zM10 16h4v2h-4v-2zM4 16h4v2H4v-2zm12 0h4v2h-4v-2z"/></svg>
+                Passive Sourcing
+              </button>
+              <button type="button" class="hero-demo-tab" data-demo-tab="schedule" aria-selected="false">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2zm13 8H6v10h14V10zM8 12h3v3H8v-3zm5 0h3v3h-3v-3z"/></svg>
+                Auto-Scheduling
+              </button>
+              <button type="button" class="hero-demo-tab is-active" data-demo-tab="interview" aria-selected="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4 6h12v8H4V6zm14 2 4-2v8l-4-2V8z"/></svg>
+                AI Interviews
+              </button>
+              <span class="hero-demo-live"><i></i> Live demo</span>
             </div>
-            <video
-              class="hero-video"
-              autoplay
-              muted
-              loop
-              playsinline
-              poster="assets/img-meeting-indian.png"
-              aria-label="Brainhunter AI platform demo video"
-            >
-              <source src="assets/hero-ai.mp4" type="video/mp4" />
-            </video>
+
+            <div class="hero-demo-panel is-active" data-demo-panel="interview">
+              <div class="demo-interview-head">
+                <div class="demo-interview-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4 6h12v8H4V6zm14 2 4-2v8l-4-2V8z"/></svg>
+                  <span>AI Interview — Aarav Mehta</span>
+                </div>
+                <span class="demo-recording"><i></i> Recording</span>
+              </div>
+
+              <div class="demo-chat">
+                <div class="demo-msg demo-msg-ai demo-step" data-step="1">
+                  <div class="demo-avatar demo-avatar-ai" aria-hidden="true">AI</div>
+                  <div class="demo-bubble">
+                    <p class="demo-meta">Question 2 of 6 · Your question</p>
+                    <p>Walk me through a system you designed to handle real scale.</p>
+                  </div>
+                </div>
+
+                <div class="demo-msg demo-msg-user demo-step" data-step="2">
+                  <div class="demo-avatar" aria-hidden="true">AM</div>
+                  <div class="demo-answer">
+                    <div class="demo-wave" aria-hidden="true">
+                      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    </div>
+                    <span class="demo-answering">Answering…</span>
+                  </div>
+                </div>
+
+                <div class="demo-msg demo-msg-ai demo-step" data-step="3">
+                  <div class="demo-avatar demo-avatar-ai" aria-hidden="true">AI</div>
+                  <div class="demo-bubble demo-followup">
+                    <p class="demo-meta demo-meta-spark">Adaptive follow-up</p>
+                    <p>What was the QPS, and where did it break first?</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-scorebar demo-step" data-step="4">
+                <div class="demo-score-ring" aria-hidden="true"><span>92</span></div>
+                <div class="demo-score-copy">
+                  <strong>Rubric-scored · ready to review</strong>
+                  <span>Grammar 94 · Fluency 89 · Relevance 92</span>
+                </div>
+                <div class="demo-score-check" aria-hidden="true">✓</div>
+              </div>
+            </div>
+
+            <div class="hero-demo-panel" data-demo-panel="ask" hidden>
+              <div class="demo-ask">
+                <div class="demo-ask-bubble">Hi! I’m Brainhunter AI. What role are you sourcing for today?</div>
+                <div class="demo-ask-user">Senior Backend Engineer — remote. Find passive candidates.</div>
+                <div class="demo-ask-status"><i></i> Scanning talent sources…</div>
+                <div class="demo-ask-result">Done — 47 qualified candidates in 58s. Top match scored <strong>96%</strong>.</div>
+              </div>
+            </div>
+
+            <div class="hero-demo-panel" data-demo-panel="source" hidden>
+              <div class="demo-source-list">
+                <div class="demo-source-card"><span class="demo-source-score">96%</span><div><strong>Aarav Mehta</strong><small>Senior Backend · Stripe</small></div></div>
+                <div class="demo-source-card"><span class="demo-source-score">94%</span><div><strong>Priya Nair</strong><small>Staff Engineer · Razorpay</small></div></div>
+                <div class="demo-source-card"><span class="demo-source-score">91%</span><div><strong>Kabir Shah</strong><small>Backend Lead · Freshworks</small></div></div>
+              </div>
+            </div>
+
+            <div class="hero-demo-panel" data-demo-panel="schedule" hidden>
+              <div class="demo-schedule">
+                <p class="demo-schedule-title">Interview slots auto-booked</p>
+                <div class="demo-slot is-booked">Tue 11:00 AM · Aarav Mehta</div>
+                <div class="demo-slot">Wed 3:30 PM · Priya Nair</div>
+                <div class="demo-slot">Thu 10:00 AM · Kabir Shah</div>
+              </div>
+            </div>
           </div>
-          <div class="hero-float-chip chip-a"><span>2×</span> Faster hiring cycles</div>
         </div>
       </div>
     </section>
@@ -129,6 +205,60 @@
         <div class="stat reveal"><div class="stat-value">250k+</div><div class="stat-label">Candidates Database</div></div>
         <div class="stat reveal"><div class="stat-value">200+</div><div class="stat-label">Companies Trust Us</div></div>
         <div class="stat reveal"><div class="stat-value">2k+</div><div class="stat-label">Jobs Placed</div></div>
+      </div>
+    </section>
+
+    <section class="future-screening" id="future-screening">
+      <div class="container">
+        <div class="section-head future-screening-head reveal">
+          <p class="eyebrow">Why Brainhunter</p>
+          <h2>The Future of <span class="future-word" id="futureWord">Screening</span></h2>
+          <p class="section-sub">Discover how AI-powered screening transforms candidate evaluation at scale.</p>
+        </div>
+
+        <div class="future-map reveal" aria-label="Future of screening capabilities">
+          <svg class="future-wave" viewBox="0 0 1100 420" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M40 210 C 180 40, 320 380, 480 180 S 780 40, 1060 220" />
+            <path class="future-wave-2" d="M60 240 C 220 80, 360 360, 520 210 S 820 90, 1040 250" />
+          </svg>
+
+          <article class="future-node future-node-1">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 6h12v8H4V6zm14 2 4-2v8l-4-2V8z"/></svg>
+            </span>
+            <h3>Automated AI Interviews</h3>
+          </article>
+          <article class="future-node future-node-2">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 19h16v-2H4v2zm2-4h2V5H6v10zm5 0h2V9h-2v6zm5 0h2V3h-2v12z"/></svg>
+            </span>
+            <h3>Real-Time Candidate Insights</h3>
+          </article>
+          <article class="future-node future-node-3">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm0 2.2 6 2.2v4.7c0 3.8-2.5 7.2-6 8.7-3.5-1.5-6-4.9-6-8.7V6.4l6-2.2zm-1 4.3v5l4.2 2.5.9-1.5-3.1-1.8V8.5H11z"/></svg>
+            </span>
+            <h3>Unbiased Evaluation</h3>
+          </article>
+          <article class="future-node future-node-4">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3zm0 2c-2.3 0-7 1.2-7 3.5V19h14v-2.5C15 14.2 10.3 13 8 13zm8 0c-.3 0-.7 0-1 .1 1.2.9 2 2.1 2 3.4V19h7v-2.5c0-2.3-4.7-3.5-8-3.5z"/></svg>
+            </span>
+            <h3>Screen 100% of Applicants</h3>
+          </article>
+          <article class="future-node future-node-5">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="m12 2 2.4 7.2H22l-6 4.4 2.3 7.1L12 16.8 5.7 20.7 8 13.6 2 9.2h7.6L12 2z"/></svg>
+            </span>
+            <h3>Instant Ranking &amp; Reports</h3>
+          </article>
+          <article class="future-node future-node-6">
+            <span class="future-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 3h-2v8H7l5 6 5-6h-4V3zm-9 16v2h16v-2H4z"/></svg>
+            </span>
+            <h3>Faster Time-to-Hire</h3>
+          </article>
+        </div>
       </div>
     </section>
 

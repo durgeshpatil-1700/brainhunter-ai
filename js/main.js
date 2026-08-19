@@ -162,15 +162,85 @@
     });
   }
 
+  /* Hero animated product demo */
+  const heroDemo = document.getElementById("heroDemo");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (heroDemo) {
+    const tabs = [...heroDemo.querySelectorAll("[data-demo-tab]")];
+    const panels = [...heroDemo.querySelectorAll("[data-demo-panel]")];
+    const order = ["interview", "ask", "source", "schedule"];
+    let tabIndex = 0;
+    let cycleTimer = 0;
+
+    const showPanel = (name) => {
+      tabs.forEach((tab) => {
+        const on = tab.dataset.demoTab === name;
+        tab.classList.toggle("is-active", on);
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach((panel) => {
+        const on = panel.dataset.demoPanel === name;
+        panel.hidden = !on;
+        panel.classList.toggle("is-active", on);
+      });
+
+      if (name === "interview") runInterviewSequence();
+    };
+
+    const runInterviewSequence = () => {
+      const steps = heroDemo.querySelectorAll('[data-demo-panel="interview"] .demo-step');
+      steps.forEach((el) => el.classList.remove("is-visible"));
+      steps.forEach((el, i) => {
+        window.setTimeout(() => el.classList.add("is-visible"), reduceMotion ? 0 : 280 + i * 700);
+      });
+    };
+
+    const startCycle = () => {
+      if (reduceMotion) return;
+      cycleTimer = window.setInterval(() => {
+        tabIndex = (tabIndex + 1) % order.length;
+        showPanel(order[tabIndex]);
+      }, 6500);
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabIndex = Math.max(0, order.indexOf(tab.dataset.demoTab));
+        showPanel(tab.dataset.demoTab);
+        window.clearInterval(cycleTimer);
+        startCycle();
+      });
+    });
+
+    showPanel("interview");
+    startCycle();
+  }
+
+  /* Future of Screening rotating word */
+  const futureWord = document.getElementById("futureWord");
+  if (futureWord && !reduceMotion) {
+    const words = ["Screening", "Interviews", "Assessment", "Matching"];
+    let i = 0;
+    window.setInterval(() => {
+      futureWord.classList.add("is-swap");
+      window.setTimeout(() => {
+        i = (i + 1) % words.length;
+        futureWord.textContent = words[i];
+        futureWord.classList.remove("is-swap");
+      }, 280);
+    }, 2600);
+  }
+
   /* Subtle AI neural network for light hero background */
   const heroVideo = document.querySelector(".hero-video");
-  if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (heroVideo && reduceMotion) {
     heroVideo.removeAttribute("autoplay");
     heroVideo.pause();
   }
 
   const canvas = document.getElementById("heroAiCanvas");
-  if (canvas && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (canvas && !reduceMotion) {
     const ctx = canvas.getContext("2d");
     let nodes = [];
     let raf = 0;
